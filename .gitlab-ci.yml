@@ -1,0 +1,22 @@
+stages:
+  - test
+  - deploy
+
+before_script:
+  - npm install
+
+test:
+  stage: test
+  script:
+    - npm test
+
+deploy:
+  stage: deploy
+  script:
+    - npm install gh-pages
+    - npx gh-pages -d build
+  only:
+    - master
+  environment:
+    name: production
+    url: https://angelpanjiMwale.github.io/Todo-list-app2
