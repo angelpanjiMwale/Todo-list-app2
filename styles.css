@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#tasks li {
+    text-align: left;
+    list-style: none;
+    cursor: pointer;
+}
+
+#tasks li.done {
+    text-decoration: line-through;
+}
